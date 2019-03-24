@@ -43,11 +43,11 @@ class Node {
 			const b = this.parent;
 			const a = b.parent;
 
-			let cStack = [];
+			const cStack = [];
 			const cRight = c.right;
 			const cLeft = c.left;
 
-			let bStack = [];
+			const bStack = [];
 			const bRight = b.right;
 			const bLeft = b.left;
 

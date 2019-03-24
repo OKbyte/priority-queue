@@ -89,7 +89,6 @@ class MaxHeap {
 	clear() {
 		this.root = null;
 		this.parentNodes = [];
-
 		this.heapSize = 0;
 	}
 
@@ -114,13 +113,13 @@ class MaxHeap {
 	shiftNodeUp(node) {
 		if (node.parent && node.priority > node.parent.priority) {
 			if (!node.right && !node.parent.right) {
-				let i = this.parentNodes.indexOf(node);
-				let j = this.parentNodes.indexOf(node.parent);
+				const i = this.parentNodes.indexOf(node);
+				const j = this.parentNodes.indexOf(node.parent);
 
 				this.parentNodes[i] = node.parent;
 				this.parentNodes[j] = node;
 			} else if (!node.right) {
-				let i = this.parentNodes.indexOf(node);
+				const i = this.parentNodes.indexOf(node);
 
 				this.parentNodes[i] = node.parent;
 			}
@@ -149,13 +148,13 @@ class MaxHeap {
 
 		if (nodeChild && nodeChild.priority > node.priority) {
 			if (!nodeChild.right && !node.right) {
-				let i = this.parentNodes.indexOf(nodeChild);
-				let j = this.parentNodes.indexOf(node);
+				const i = this.parentNodes.indexOf(nodeChild);
+				const j = this.parentNodes.indexOf(node);
 
 				this.parentNodes[i] = node;
 				this.parentNodes[j] = nodeChild;
 			} else if (!nodeChild.right) {
-				let i = this.parentNodes.indexOf(nodeChild);
+				const i = this.parentNodes.indexOf(nodeChild);
 
 				this.parentNodes[i] = node;
 			}
